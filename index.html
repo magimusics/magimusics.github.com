@@ -9,18 +9,11 @@
         let isAndroid = ua.indexOf("android") > -1;
         let isIphone = ua.indexOf("iphone") > -1;
         if (isIphone == true) {
-            let app = {
-                launchApp: function() {
-                    setTimeout(function() {
-                        window.location.href = "https://apps.apple.com/ru/app/gedik-trader/id1116732065";
-                    }, 25);
-                    window.location.href = "gediktrader://gediktrader.com";
-                },
-                openWebApp: function() {
-                    window.location.href = "https://apps.apple.com/ru/app/gedik-trader/id1116732065";
-                }
-            };
-            app.launchApp();
+            try {
+			window.location.href = "gediktrader://gediktrader.com";
+	    	} catch(e) {
+			window.location.href = "https://apps.apple.com/ru/app/gedik-trader/id1116732065";
+		}
         } else if (isAndroid== true) {
             let app = {
                 launchApp: function() {
