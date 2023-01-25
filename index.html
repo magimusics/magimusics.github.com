@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en-US">
 <head>
+<link rel="alternate" href="ios-app://id1116732065/gediktrader/screen=register" />
 <meta name="apple-itunes-app" content="app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL">
 </head>
 <body>
@@ -9,7 +10,7 @@
         let isAndroid = ua.indexOf("android") > -1;
         let isIphone = ua.indexOf("iphone") > -1;
         if (isIphone == true) {
-		window.location.href = "gediktrader://gediktrader.com";
+		window.location.href = "gediktrader://gediktrader.com?screen=register";
 		setTimeout(function () {
     			window.location.href = "https://apps.apple.com/ru/app/gedik-trader/id1116732065";
 		}, 1000);
