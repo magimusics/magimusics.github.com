@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+</head>
+<body>
+	<script>
+		        let ua = navigator.userAgent.toLowerCase();
+        let isAndroid = ua.indexOf("android") > -1;
+        let isIphone = ua.indexOf("iphone") > -1;
+        if (isIphone == true) {
+            let app = {
+                launchApp: function() {
+                    setTimeout(function() {
+                        window.location.href = "https://itunes.apple.com/us/app/appname/appid";
+                    }, 25);
+                    window.location.href = "gediktrader://gediktrader.com";
+                },
+                openWebApp: function() {
+                    window.location.href = "https://itunes.apple.com/us/app/appname/appid";
+                }
+            };
+            app.launchApp();
+        } else if (isAndroid== true) {
+            let app = {
+                launchApp: function() {
+                    window.location.replace("gediktrader://gediktrader.com");
+                    setTimeout(this.openWebApp, 500);
+                },
+                openWebApp: function() {
+                    window.location.href =  "https://play.google.com/store/apps/details?id=packagename";
+                }
+            };
+            app.launchApp();
+        }
+	</script>
+</body>
+</html>
