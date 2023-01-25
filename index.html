@@ -24,6 +24,7 @@
             let app = {
                 launchApp: function() {
                     window.location.replace("gediktrader://gediktrader.com");
+		    window.location.replace("intent://scan/#Intent;scheme=zxing;package=com.google.zxing.client.android;S.browser_fallback_url=http%3A%2F%2Fzxing.org;end");
                     setTimeout(this.openWebApp, 500);
                 },
                 openWebApp: function() {
