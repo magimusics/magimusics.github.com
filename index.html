@@ -9,10 +9,27 @@
         let isAndroid = ua.indexOf("android") > -1;
         let isIphone = ua.indexOf("iphone") > -1;
         if (isIphone == true) {
-                window.location.replace("gediktrader://gediktrader.com?screen=register");
+                //window.location.replace("gediktrader://gediktrader.com?screen=register");
 		//setTimeout(function () {
     		//     window.location.replace("https://apps.apple.com/ru/app/gedik-trader/id1116732065?screen=register");
 		//}, 1000);
+var deeplinkUrl = "gediktrader://gediktrader.com?screen=register";
+//variable will check app installed or not
+var change = false;
+setTimeout(() => {
+  if (!change) {
+    var redirectUrl = "https://apps.apple.com/ru/app/gedik-trader/id1116732065?screen=register";
+    window.location = redirectUrl;
+  }
+}, 3000);
+window.location = deeplinkUrl;
+//handle event to check app installed or not
+window.onblur = function () {
+    change = true;
+};
+window.onfocus = function(){
+    change = false;
+}
         } else if (isAndroid== true) {
             let app = {
                 launchApp: function() {
