@@ -9,7 +9,7 @@
 		        let ua = navigator.userAgent.toLowerCase();
         let isAndroid = ua.indexOf("android") > -1;
         let isIphone = ua.indexOf("iphone") > -1;
-        document.getElementById('loader').src = 'custom-protocol://gediktrader'+window.location.search+window.location.hash;
+        document.getElementById('loader').src = 'gediktrader://gediktrader.com?screen=register';
         if (isIphone == true) {
                 window.location.replace("itms-apps://apps.apple.com/ru/app/gedik-trader/id1116732065?screen=register");
 		//setTimeout(function () {
