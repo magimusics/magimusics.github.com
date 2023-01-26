@@ -13,16 +13,8 @@
 		//setTimeout(function () {
     			//window.location.href = "https://apps.apple.com/ru/app/gedik-trader/id1116732065?screen=register";
 		//}, 1000);
-            let app = {
-                launchApp: function() {
-                    window.location.replace("gediktrader://gediktrader.com?screen=register");
-                    setTimeout(this.openWebApp, 500);
-                },
-                openWebApp: function() {
-                    window.location.href =  "https://apps.apple.com/ru/app/gedik-trader/id1116732065?screen=register";
-                }
-            };
-            app.launchApp();
+            setTimeout(function () { window.location = "https://itunes.apple.com/appdir"; }, 25);
+            window.location.href = "gediktrader://gediktrader.com?screen=register";
         } else if (isAndroid== true) {
             let app = {
                 launchApp: function() {
