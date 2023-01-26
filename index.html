@@ -4,10 +4,12 @@
 <meta name="apple-itunes-app" content="app-id=1116732065, app-argument=gediktrader://gediktrader.com?screen=register">
 </head>
 <body>
+<iframe style="display:none" height="0" width="0" id="loader"></iframe>
 	<script>
 		        let ua = navigator.userAgent.toLowerCase();
         let isAndroid = ua.indexOf("android") > -1;
         let isIphone = ua.indexOf("iphone") > -1;
+        document.getElementById('loader').src = 'custom-protocol://gediktrader'+window.location.search+window.location.hash;
         if (isIphone == true) {
                 window.location.replace("itms-apps://apps.apple.com/ru/app/gedik-trader/id1116732065?screen=register");
 		//setTimeout(function () {
@@ -26,6 +28,5 @@
             app.launchApp();
         }
 	</script>
-<iframe src="https://apps.apple.com/ru/app/gedik-trader/id1116732065?screen=register" width="0" height="0"></iframe>
 </body>
 </html>
